@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consulta de Frete</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Consulta de Frete</h1>
+        <form id="freightForm">
+            <!-- Campos existentes -->
+            <label for="cep">CEP de Destino:</label>
+            <input type="text" id="cep" name="cep" required>
+            
+            <label for="volumes">Quantidade de Volumes:</label>
+            <input type="number" id="volumes" name="volumes" required>
+            
+            <label for="peso">Peso Unitário por Volume (kg):</label>
+            <input type="number" step="0.01" id="peso" name="peso" required>
+            
+            <label for="comprimento">Comprimento da Caixa (cm):</label>
+            <input type="number" id="comprimento" name="comprimento" required>
+            
+            <label for="largura">Largura da Caixa (cm):</label>
+            <input type="number" id="largura" name="largura" required>
+            
+            <label for="altura">Altura da Caixa (cm):</label>
+            <input type="number" id="altura" name="altura" required>
+            
+            <label for="valor">Valor dos Produtos (R$):</label>
+            <input type="number" step="0.01" id="valor" name="valor" required>
+
+            <!-- Novos campos -->
+            <label for="telefone">Telefone:</label>
+            <input type="tel" id="telefone" name="telefone" required>
+            
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <button type="submit">Calcular Frete</button>
+        </form>
+        <div id="resultado"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
